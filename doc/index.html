@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample Site</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="display-3">
+          Grade Control API
+        </div>
+        <span class="badge badge-light">hppt://localhost:3000/</span>
+      </div>
+      <div class="list-group mb-5">
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-danger">/grades</h5>
+            <small
+              ><h2>
+                <span class="badge badge-danger">POST</span>
+              </h2></small
+            >
+          </div>
+          <p class="mb-1 mt-2">
+            Endpoint para criar novo registro no arquivo grades.json
+          </p>
+          <small class="mt-2">
+            Exemplo de envio:
+            <code>
+              { "student": "Maria José", "subject": "NodeJs", "type": "Desafio",
+              "value": 10 }
+            </code>
+          </small>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-warning">/grades</h5>
+            <small
+              ><h2>
+                <span class="badge badge-warning text-light">PUT</span>
+              </h2></small
+            >
+          </div>
+          <p class="mb-1 mt-2">
+            Endpoint para atualizar uma grade no arquivo grades.json
+          </p>
+          <small class="mt-2">
+            Exemplo de envio:
+            <code>
+              { "id": 49, "student": "Jogli Martins", "value": 25 }
+            </code>
+          </small>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-danger">/grades</h5>
+            <small
+              ><h2>
+                <span class="badge badge-danger">DELETE</span>
+              </h2></small
+            >
+          </div>
+          <p class="mb-1 mt-2">
+            Endpoint para excluir uma grade no arquivo grades.json
+          </p>
+          <small class="mt-2">
+            Exemplo de envio:
+            <code>
+              { "id": 49 }
+            </code>
+          </small>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-success">/grades/get/{id}</h5>
+            <small
+              ><h2>
+                <span class="badge badge-success">GET</span>
+              </h2></small
+            >
+          </div>
+          <p class="mb-1 mt-2">
+            Endpoint para consultar uma grade no arquivo grades.json
+          </p>
+          <small class="mt-2">
+            Exemplo de envio:
+            <code>
+              {}
+            </code>
+          </small>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-success">/grades/total</h5>
+            <small
+              ><h2>
+                <span class="badge badge-success">GET</span>
+              </h2></small
+            >
+          </div>
+          <p class="mb-1 mt-2">
+            Endpoint e Função para consultar o total das notas de um student em
+            uma subject no arquivo grades.json
+          </p>
+          <small class="mt-2">
+            Exemplo de envio:
+            <code>
+              { "subject": "01 - JavaScript", "type": "Fórum" }
+            </code>
+          </small>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-success">/grades/avg</h5>
+            <small
+              ><h2>
+                <span class="badge badge-success">GET</span>
+              </h2></small
+            >
+          </div>
+          <p class="mb-1 mt-2">
+            Endpoint e Função para consultar a media das notas das grades de um
+            determinado subject e type no arquivo grades.json
+          </p>
+          <small class="mt-2">
+            Exemplo de envio:
+            <code>
+              { "subject": "01 - JavaScript", "type": "Fórum" }
+            </code>
+          </small>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
